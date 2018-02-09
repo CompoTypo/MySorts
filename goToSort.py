@@ -18,13 +18,16 @@ inFile = open(inFileName, "r")
 listToSort = []
 
 for line in inFile:
-    listToSort.append(line)
+    listToSort.append(int(line.rstrip()))
+
 
 print(listToSort)
 
 if len(listToSort) >= 15:
+    print("quicksort")
     sortedList = quickSort.quickSort.qSortHelper(listToSort)
 else:
+    print("insertion sort")
     sortedList = insertionSort.insertionSort.iSort(listToSort)
 
 print(sortedList)

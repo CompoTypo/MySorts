@@ -8,12 +8,13 @@
 class insertionSort:
 
     def iSort(toSort):
-        for i in range(1, len(toSort)):
+        for i in range(1 , len(toSort)):
             actor = toSort[i]
-            j = i - 1
-            while j >= 0 and actor < toSort[j]:
-                toSort[j + 1] = toSort[j]
+            j = i
+            while j > 0 and actor < toSort[j - 1]:
+                toSort[j] = toSort[j - 1]
                 j -= 1
-            toSort[j + 1] = actor
+            toSort[j] = actor
+            print(toSort)
         return toSort
 
