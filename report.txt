@@ -1,0 +1,300 @@
+REPORT
+
+If the sort was no challenge, the challenge part of the write up is omitted.
+
+Sort type      # of Elements  Data type      Comparisons    Movements      Totaltime      
+Insertion      20             InOrder        19             0              4              
+Insertion      20             ReverseOrder   190            190            12             
+Insertion      20             AlmostOrder    40             21             4              
+Insertion      20             Random         103            85             10             
+Selection      20             InOrder        190            19             18             
+Selection      20             ReverseOrder   190            19             14             
+Selection      20             AlmostOrder    190            19             11             
+Selection      20             Random         190            19             17             
+Merge          20             InOrder        67             0              15             
+Merge          20             ReverseOrder   107            48             16             
+Merge          20             AlmostOrder    79             2              14             
+Merge          20             Random         96             12             18             
+Quick          20             InOrder        78             12             10             
+Quick          20             ReverseOrder   82             22             8              
+Quick          20             AlmostOrder    78             13             6              
+Quick          20             Random         120            25             13             
+Heap           20             InOrder        121            80             15             
+Heap           20             ReverseOrder   105            62             14             
+Heap           20             AlmostOrder    121            79             14             
+Heap           20             Random         112            69             13             
+Radix          20             InOrder        0              240            92             
+Radix          20             ReverseOrder   0              240            96             
+Radix          20             AlmostOrder    0              240            116            
+Radix          20             Random         0              240            118
+
+Sort type      # of Elements  Data type      Comparisons    Movements      Totaltime      
+Insertion      10000          InOrder        9999           0              93             
+Insertion      10000          ReverseOrder   49995000       49995000       360894         
+Insertion      10000          AlmostOrder    3085969        3075970        22477          
+Insertion      10000          Random         24706611       24696620       178095         
+Selection      10000          InOrder        49995000       9999           328455         
+Selection      10000          ReverseOrder   49995000       9999           333880         
+Selection      10000          AlmostOrder    49995000       9999           304642         
+Selection      10000          Random         49995000       9999           309947         
+Merge          10000          InOrder        79007          0              1459           
+Merge          10000          ReverseOrder   143615         69008          1799           
+Merge          10000          AlmostOrder    122470         1678           1911           
+Merge          10000          Random         138242         7786           2700           
+Quick          10000          InOrder        125439         5904           505            
+Quick          10000          ReverseOrder   125452         10904          537            
+Quick          10000          AlmostOrder    127936         8025           621            
+Quick          10000          Random         181605         33712          1621           
+Heap           10000          InOrder        244460         131956         3037           
+Heap           10000          ReverseOrder   226682         116696         2881           
+Heap           10000          AlmostOrder    243568         130854         3037           
+Heap           10000          Random         235408         124314         3322           
+Radix          10000          InOrder        0              120000         3701           
+Radix          10000          ReverseOrder   0              120000         3736           
+Radix          10000          AlmostOrder    0              120000         3678           
+Radix          10000          Random         0              120000         3687   
+
+Sort type      # of Elements  Data type      Comparisons    Movements      Totaltime      
+Insertion      20000          InOrder        19999          0              184            
+Insertion      20000          ReverseOrder   199990000      199990000      1729065        
+Insertion      20000          AlmostOrder    12327057       12307058       89523          
+Insertion      20000          Random         100366932      100346943      725524         
+Selection      20000          InOrder        199990000      19999          1231752        
+Selection      20000          ReverseOrder   199990000      19999          1412603        
+Selection      20000          AlmostOrder    199990000      19999          1221151        
+Selection      20000          Random         199990000      19999          1220931        
+Merge          20000          InOrder        168015         0              3086           
+Merge          20000          ReverseOrder   307231         148016         3843           
+Merge          20000          AlmostOrder    267112         3427           4140           
+Merge          20000          Random         296237         15178          5852           
+Quick          20000          InOrder        270864         11808          1083           
+Quick          20000          ReverseOrder   270878         21808          1141           
+Quick          20000          AlmostOrder    277116         16671          1332           
+Quick          20000          Random         387679         71850          3389           
+Heap           20000          InOrder        529074         282878         6440           
+Heap           20000          ReverseOrder   493307         254334         6196           
+Heap           20000          AlmostOrder    527167         281788         6463           
+Heap           20000          Random         510736         268345         7146           
+Radix          20000          InOrder        0              240000         7763           
+Radix          20000          ReverseOrder   0              240000         7373           
+Radix          20000          AlmostOrder    0              240000         7377           
+Radix          20000          Random         0              240000         7379  
+
+=========================================
+Sort 1: (Modified) Insertion Sort (Winner for smaller number of elements)
+-----------------------
+Insertion      20             InOrder        19             0              4              
+Insertion      20             ReverseOrder   190            190            12             
+Insertion      20             AlmostOrder    40             21             4              
+Insertion      20             Random         103            85             10
+
+Insertion      10000          InOrder        9999           0              93             
+Insertion      10000          ReverseOrder   49995000       49995000       360894         
+Insertion      10000          AlmostOrder    3085969        3075970        22477          
+Insertion      10000          Random         24706611       24696620       178095  
+
+Insertion      20000          InOrder        19999          0              184            
+Insertion      20000          ReverseOrder   199990000      199990000      1729065        
+Insertion      20000          AlmostOrder    12327057       12307058       89523          
+Insertion      20000          Random         100366932      100346943      725524   
+
+Approach
+-To iterate through each element and traverse backwards from said element, making
+comparisons and ordering the elements behind the key.
+
+Challenge
+-Insertion sort (that returned sort results) was modified so it would not
+traverse already established values. It would simply break the loop that would 
+traverse backwards if the nested condition was not meet. This allowed it to
+perform much faster and to have a better time complexity than O(N^2) as long
+as the order wasnt completely reversed.
+
+-Initially found modification trying to count comparisons and movements.
+
+Assessment
+-Modified Insertion Sort was most likely the fastest sorting algorithm with 
+shorter lists of elements.
+
+-If list was already in order, this insertion sort would essentially check it the fastest
+
+-Worst case is the list's order is completely reversed with O(N^2)
+roughly being the complexity.
+
+=========================================
+Sort 2: Selection Sort
+-----------------------
+Selection      20             InOrder        190            19             18             
+Selection      20             ReverseOrder   190            19             14             
+Selection      20             AlmostOrder    190            19             11             
+Selection      20             Random         190            19             17  
+
+Selection      10000          InOrder        49995000       9999           328455         
+Selection      10000          ReverseOrder   49995000       9999           333880         
+Selection      10000          AlmostOrder    49995000       9999           304642         
+Selection      10000          Random         49995000       9999           309947  
+
+Selection      20000          InOrder        199990000      19999          1231752        
+Selection      20000          ReverseOrder   199990000      19999          1412603        
+Selection      20000          AlmostOrder    199990000      19999          1221151        
+Selection      20000          Random         199990000      19999          1220931  
+
+Approach
+-To iterate through the list, grab the smallest element and place it at the start of the list.
+Then find the next smallest element and placing it after the previously found minimum over until
+the list is ordered.
+
+Assessment
+-Selection sort was much slower than Insertion sort in all cases, despite having less movements.
+This is evident in the constant number of comparisons made regardless of the
+preexisting order of the elements. 
+
+-Instead of fixing errors behind the key element like insertion sort, 
+Selection would traverse forwards finding elements to bring back to place
+in the correct order.
+
+-It would always make a movement (swap) for almost every element in the data set. In 
+general, this is very inefficient.
+
+-Roughly O(N^2) (time complexity) comparisons were made consistenly.
+
+=========================================
+Sort 3: Merge Sort
+-----------------------
+Merge          20             InOrder        67             0              15             
+Merge          20             ReverseOrder   107            48             16             
+Merge          20             AlmostOrder    79             2              14             
+Merge          20             Random         96             12             18
+
+Merge          10000          InOrder        79007          0              1459           
+Merge          10000          ReverseOrder   143615         69008          1799           
+Merge          10000          AlmostOrder    122470         1678           1911           
+Merge          10000          Random         138242         7786           2700   
+
+Merge          20000          InOrder        168015         0              3086           
+Merge          20000          ReverseOrder   307231         148016         3843           
+Merge          20000          AlmostOrder    267112         3427           4140           
+Merge          20000          Random         296237         15178          5852  
+
+Approach
+-To break down an entire list or array and reassemble it by comparing elements and 
+placing them in their proper order.
+
+Assessment
+-Merge sort doesnt quite stand out when compared to its league competitor, Quick sort.
+
+-With smaller lists it is slower than Insertion sort and comprable to Selction sort.
+
+-With larger lists, Merge sort performs much faster than the O(N^2) sorts and even the O(N)
+sorts, which is very interesting.
+
+-Divide and conquer algorithms in general seem to focus on minimizing comparisons
+and movements
+
+-Worst case complexity is O(N*logN)
+
+=========================================
+Sort 4: Quick Sort (Overall winner based on my tests)
+-----------------------
+Quick          20             InOrder        78             12             10             
+Quick          20             ReverseOrder   82             22             8              
+Quick          20             AlmostOrder    78             13             6              
+Quick          20             Random         120            25             13  
+
+Quick          10000          InOrder        125439         5904           505            
+Quick          10000          ReverseOrder   125452         10904          537            
+Quick          10000          AlmostOrder    127936         8025           621            
+Quick          10000          Random         181605         33712          1621
+
+Quick          20000          InOrder        270864         11808          1083           
+Quick          20000          ReverseOrder   270878         21808          1141           
+Quick          20000          AlmostOrder    277116         16671          1332           
+Quick          20000          Random         387679         71850          3389 
+
+Approach
+-The goal is to pick an element as pivot and partition the given array around the picked pivot.
+Breaking down the list assembling it back together in the proper order.
+
+Assessment
+-Quick sort used many more comparisons and movements than Mergesort.
+
+-Quick sort's performance suffered with random data sets, increasing comparisons,
+and tripling movements and total time.
+
+-Despite this, quicksort still vastly outpaced all other algorithms tested.
+
+-Divide and conquer algorithms in general seem to focus on minimizing comparisons
+and movements
+
+-Worst case complexity is O(N*logN)
+
+=========================================
+Sort 5: Heap Sort
+-----------------------
+Heap           20             InOrder        121            80             15             
+Heap           20             ReverseOrder   105            62             14             
+Heap           20             AlmostOrder    121            79             14             
+Heap           20             Random         112            69             13 
+
+Heap           10000          InOrder        244460         131956         3037           
+Heap           10000          ReverseOrder   226682         116696         2881           
+Heap           10000          AlmostOrder    243568         130854         3037           
+Heap           10000          Random         235408         124314         3322   
+
+Heap           20000          InOrder        529074         282878         6440           
+Heap           20000          ReverseOrder   493307         254334         6196           
+Heap           20000          AlmostOrder    527167         281788         6463           
+Heap           20000          Random         510736         268345         7146
+
+Approach
+-My goal was to heapify a set of data and make comparisons travesing the heap to find
+the next smallest element and move it into the proper place in the vector.
+
+Assessment
+-Heap sort was relatively fast and very consistent reagardless of data set.
+
+-However it was still much slower than both of the O(N*logN) sorts.
+
+-It made many movements (swaps). More so than the O(N*logN) sorts.
+
+-It roughly doubled the number of comparisons compared to O(N*logN) sorts aswell.
+
+-Has a time complexity of O(N)
+
+
+=========================================
+Sort 6: Radix Sort
+-----------------------
+Radix          20             InOrder        0              240            92             
+Radix          20             ReverseOrder   0              240            96             
+Radix          20             AlmostOrder    0              240            116            
+Radix          20             Random         0              240            118
+
+Radix          10000          InOrder        0              120000         3701           
+Radix          10000          ReverseOrder   0              120000         3736           
+Radix          10000          AlmostOrder    0              120000         3678           
+Radix          10000          Random         0              120000         3687
+
+Radix          20000          InOrder        0              240000         7763           
+Radix          20000          ReverseOrder   0              240000         7373           
+Radix          20000          AlmostOrder    0              240000         7377           
+Radix          20000          Random         0              240000         7379 
+
+Approach
+-My goal was to sorts data with integer keys by grouping keys by the individual digits 
+which share the same significant position and value.
+
+Assessment
+-Radix is, at its heart, a special counting sort. Meaning there are no comparisons
+to be made.
+
+-I counted each iteration of the final loop in the radix sort, which reassembles the
+list, as a movement as it was essentially moving the data elements around.
+
+-It performed slightly worse than the heap sort, most likely due to the number of 
+digits for each number. This required more recursive radix calls. If the data set contained
+smaller integers, the results would be vastly different.
+
+-Radix sort works well for small values with less digits to count and place.
+
+-Has a time complexity of O(P(10 + N)) where P is the number of digits for the max value.
+Time complexity is roughly O(N).
